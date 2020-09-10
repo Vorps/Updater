@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="dev.vorps.net" id="3a026914-4af3-4323-a09b-f738edaaad22" port="3589" customName="Vorps" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="update.vorps.net" id="bccb248a-131a-42d3-87bd-8f43f220e83a" port="3589" customName="Update" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="dev.vorps.net" id="1f878546-291b-4295-9eb9-657884ffa07e" port="3589" customName="Vorps" nameFormat="CUSTOM" username="vorps" />
+      <sshConfig authType="PASSWORD" host="update.vorps.net" id="77231ff7-02a9-4563-8c62-64d411448033" port="3589" customName="Update" nameFormat="CUSTOM" username="update" />
+      <sshConfig authType="PASSWORD" host="update.vorps.net" id="559563ef-948c-4d13-be19-7215748b915b" port="3589" customName="Update" nameFormat="CUSTOM" username="update" />
+    </configs>
+  </component>
+</project>

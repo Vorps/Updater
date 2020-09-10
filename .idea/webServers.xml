@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="3438d1bd-dc8a-4ac6-b801-93701458dd32" name="Vorps" url="http://dev.vorps.net">
+        <fileTransfer host="dev.vorps.net" port="3589" rootFolder="/home/vorps" accessType="SFTP" password="dfe7df92dfd1df9ddf9edf9fdfdddffddfeadfcbdf91df89dff2dfd9df93dffddfeddf8edfc3dfd9" username="vorps">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="522dfc2e-322b-43c0-a876-14a62183465c" name="Update" url="http://update.vorps.net">
+        <fileTransfer host="update.vorps.net" port="3589" rootFolder="/home/update" accessType="SFTP" username="update">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

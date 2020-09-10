@@ -1,0 +1,1559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - bd_syluria@dev.vorps.net" uuid="74164550-ee7e-40d5-b7d6-4e6fa10dad2e">
+    <database-info product="MySQL" version="5.5.50-0+deb8u1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="bd_syluria"/>
+      <table id="2" parent="1" name="lang_setting">
+        <comment>Lang suport</comment>
+      </table>
+      <table id="3" parent="1" name="money">
+        <comment>Liste des money existante sur le serveur syluria</comment>
+      </table>
+      <table id="4" parent="1" name="player">
+        <comment>Liste des joueurs de syluria</comment>
+      </table>
+      <table id="5" parent="1" name="player_money">
+        <comment>Money possédé par les joueurs</comment>
+      </table>
+      <column id="6" parent="2" name="ls_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="7" parent="2" name="ls_column_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="8" parent="2" name="ls_name_display">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <key id="9" parent="2" name="PRIMARY">
+        <columns>ls_name</columns>
+        <primary>1</primary>
+      </key>
+      <column id="10" parent="3" name="m_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="11" parent="3" name="m_alias">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="12" parent="3" name="m_color">
+        <mandatory>1</mandatory>
+        <data-type>varchar(4)</data-type>
+      </column>
+      <key id="13" parent="3" name="PRIMARY">
+        <columns>m_name</columns>
+        <primary>1</primary>
+      </key>
+      <column id="14" parent="4" name="p_uuid">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="15" parent="4" name="p_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="16" parent="4" name="p_ip">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="17" parent="4" name="p_date_first">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="18" parent="4" name="p_date_after">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;0000-00-00 00:00:00&apos;</default-expression>
+      </column>
+      <column id="19" parent="4" name="p_online">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="20" parent="4" name="p_hub">
+        <data-type>varchar(6)</data-type>
+      </column>
+      <key id="21" parent="4" name="PRIMARY">
+        <columns>p_uuid</columns>
+        <primary>1</primary>
+      </key>
+      <column id="22" parent="5" name="pm_uuid">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="23" parent="5" name="pm_money">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="24" parent="5" name="pm_value">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <index id="25" parent="5" name="money">
+        <columns>pm_money</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="26" parent="5" name="PRIMARY">
+        <columns>pm_uuid
+pm_money</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+  <data-source name="MySQL - bd_snowar@dev.vorps.net" uuid="c104df30-ea08-4005-8304-432365a030b9">
+    <database-info product="MySQL" version="5.5.50-0+deb8u1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="bd_snowar"/>
+      <table id="2" parent="1" name="bonus">
+        <comment>Parameter of bonus</comment>
+      </table>
+      <table id="3" parent="1" name="earning">
+        <comment>System earning player</comment>
+      </table>
+      <table id="4" parent="1" name="hour">
+        <comment>Data hour</comment>
+      </table>
+      <table id="5" parent="1" name="item">
+        <comment>Factory item</comment>
+      </table>
+      <table id="6" parent="1" name="lang">
+        <comment>All message</comment>
+      </table>
+      <table id="7" parent="1" name="limite">
+        <comment>Limite location</comment>
+      </table>
+      <table id="8" parent="1" name="location">
+        <comment>Factory location</comment>
+      </table>
+      <table id="9" parent="1" name="map">
+        <comment>Data map</comment>
+      </table>
+      <table id="10" parent="1" name="message_title">
+        <comment>Factory title</comment>
+      </table>
+      <table id="11" parent="1" name="parameter">
+        <comment>Variable parameter</comment>
+      </table>
+      <table id="12" parent="1" name="player_data">
+        <comment>Data player</comment>
+      </table>
+      <table id="13" parent="1" name="scenario">
+        <comment>Limite data scenario</comment>
+      </table>
+      <table id="14" parent="1" name="server">
+        <comment>Factory server</comment>
+      </table>
+      <table id="15" parent="1" name="setting">
+        <comment>Paramètre du plugin Snowar</comment>
+      </table>
+      <table id="16" parent="1" name="stats">
+        <comment>Stats player</comment>
+      </table>
+      <table id="17" parent="1" name="weather">
+        <comment>Data weather</comment>
+      </table>
+      <column id="18" parent="2" name="b_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="19" parent="2" name="b_time">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="20" parent="2" name="b_percent">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="21" parent="2" name="b_on_enable">
+        <mandatory>1</mandatory>
+        <data-type>varchar(60)</data-type>
+      </column>
+      <column id="22" parent="2" name="b_on_disable">
+        <mandatory>1</mandatory>
+        <data-type>varchar(60)</data-type>
+      </column>
+      <column id="23" parent="2" name="b_persistence">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="24" parent="2" name="b_label">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="25" parent="2" name="b_icon">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <key id="26" parent="2" name="PRIMARY">
+        <columns>b_name</columns>
+        <primary>1</primary>
+      </key>
+      <column id="27" parent="3" name="e_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="28" parent="3" name="e_kill">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="29" parent="3" name="e_kill_device">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="30" parent="3" name="e_ball">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="31" parent="3" name="e_ball_device">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="32" parent="3" name="e_victory">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="33" parent="3" name="e_victory_device">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <index id="34" parent="3" name="e_kill_device">
+        <columns>e_kill_device</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="35" parent="3" name="e_point_device">
+        <columns>e_ball_device</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="36" parent="3" name="e_victory_device">
+        <columns>e_victory_device</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="37" parent="3" name="PRIMARY">
+        <columns>e_name</columns>
+        <primary>1</primary>
+      </key>
+      <column id="38" parent="4" name="time">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="39" parent="4" name="PRIMARY">
+        <columns>time</columns>
+        <primary>1</primary>
+      </key>
+      <column id="40" parent="5" name="i_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="41" parent="5" name="i_label">
+        <mandatory>1</mandatory>
+        <data-type>varchar(60)</data-type>
+      </column>
+      <column id="42" parent="5" name="i_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="43" parent="5" name="i_byte">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="44" parent="5" name="i_skull_owner">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="45" parent="5" name="i_potion_type">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="46" parent="5" name="i_amount">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="47" parent="5" name="i_lore">
+        <data-type>varchar(60)</data-type>
+      </column>
+      <column id="48" parent="5" name="i_enchant">
+        <data-type>text</data-type>
+      </column>
+      <column id="49" parent="5" name="i_durability">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="50" parent="5" name="i_color">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="51" parent="5" name="i_hide_enchant">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <key id="52" parent="5" name="PRIMARY">
+        <columns>i_name</columns>
+        <primary>1</primary>
+      </key>
+      <column id="53" parent="6" name="l_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="54" parent="6" name="l_fr">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="55" parent="6" name="l_en">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <key id="56" parent="6" name="PRIMARY">
+        <columns>l_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="57" parent="7" name="lim_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="58" parent="7" name="lim_x+">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="59" parent="7" name="lim_x-">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="60" parent="7" name="lim_y+">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="61" parent="7" name="lim_y-">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="62" parent="7" name="lim_z+">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="63" parent="7" name="lim_z-">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <key id="64" parent="7" name="PRIMARY">
+        <columns>lim_name</columns>
+        <primary>1</primary>
+      </key>
+      <column id="65" parent="8" name="loc_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="66" parent="8" name="loc_x">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="67" parent="8" name="loc_y">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="68" parent="8" name="loc_z">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="69" parent="8" name="loc_yaw">
+        <mandatory>1</mandatory>
+        <data-type>float</data-type>
+      </column>
+      <column id="70" parent="8" name="loc_pitch">
+        <mandatory>1</mandatory>
+        <data-type>float</data-type>
+      </column>
+      <key id="71" parent="8" name="PRIMARY">
+        <columns>loc_name</columns>
+        <primary>1</primary>
+      </key>
+      <column id="72" parent="9" name="m_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="73" parent="9" name="m_spawn_lobby">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="74" parent="9" name="m_spawn_finish">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="75" parent="9" name="m_spawn_stats">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="76" parent="9" name="m_spawn_game">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="77" parent="9" name="m_distance_spawn_game">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="78" parent="9" name="m_lobby_limite">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <key id="79" parent="9" name="PRIMARY">
+        <columns>m_name</columns>
+        <primary>1</primary>
+      </key>
+      <column id="80" parent="10" name="mt_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="81" parent="10" name="mt_title">
+        <mandatory>1</mandatory>
+        <data-type>varchar(60)</data-type>
+      </column>
+      <column id="82" parent="10" name="mt_sub_title">
+        <mandatory>1</mandatory>
+        <data-type>varchar(60)</data-type>
+      </column>
+      <key id="83" parent="10" name="PRIMARY">
+        <columns>mt_name</columns>
+        <primary>1</primary>
+      </key>
+      <column id="84" parent="11" name="p_parameter">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="85" parent="11" name="p_map">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="86" parent="11" name="p_label">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="87" parent="11" name="p_time_game">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned</data-type>
+      </column>
+      <column id="88" parent="11" name="p_earning">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="89" parent="11" name="p_cooldown_ball">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="90" parent="11" name="p_nbrball">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="91" parent="11" name="p_time_ball">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="92" parent="11" name="p_ball">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="93" parent="11" name="p_damage">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="94" parent="11" name="p_time_bonus">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="95" parent="11" name="p_life">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="96" parent="11" name="p_hour">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="97" parent="11" name="p_fall">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="98" parent="11" name="p_cycle">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="99" parent="11" name="p_bonus">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="100" parent="11" name="p_weather">
+        <mandatory>1</mandatory>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <index id="101" parent="11" name="p_map">
+        <columns>p_map</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="102" parent="11" name="PRIMARY">
+        <columns>p_parameter</columns>
+        <primary>1</primary>
+      </key>
+      <column id="103" parent="12" name="pd_uuid">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="104" parent="12" name="pd_effect">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <key id="105" parent="12" name="PRIMARY">
+        <columns>pd_uuid</columns>
+        <primary>1</primary>
+      </key>
+      <column id="106" parent="13" name="scen_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="107" parent="13" name="scen_time_min">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="108" parent="13" name="scen_time_max">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="109" parent="13" name="scen_nb_player_min">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="110" parent="13" name="scen_nb_player_max">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="111" parent="13" name="scen_speed_bonus_min">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="112" parent="13" name="scen_speed_bonus_max">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="113" parent="13" name="scen_damage_min">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="114" parent="13" name="scen_damage_max">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="115" parent="13" name="scen_cooldown_time_max">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="116" parent="13" name="scen_cooldown_ball_min">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="117" parent="13" name="scen_cooldown_ball_max">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="118" parent="13" name="scen_ball_time_min">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="119" parent="13" name="scen_ball_time_max">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="120" parent="13" name="scen_life_min">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="121" parent="13" name="scen_life_max">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="122" parent="13" name="PRIMARY">
+        <columns>scen_name</columns>
+        <primary>1</primary>
+      </key>
+      <column id="123" parent="14" name="sv_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="124" parent="14" name="sv_parameter">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="125" parent="14" name="sv_player_min">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="126" parent="14" name="sv_player_max">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="127" parent="14" name="sv_scenario">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <index id="128" parent="14" name="sv_parameter">
+        <columns>sv_parameter</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="129" parent="14" name="PRIMARY">
+        <columns>sv_name
+sv_parameter</columns>
+        <primary>1</primary>
+      </key>
+      <column id="130" parent="15" name="s_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="131" parent="15" name="s_boolean">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="132" parent="15" name="s_int">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="133" parent="15" name="s_text">
+        <data-type>text</data-type>
+      </column>
+      <column id="134" parent="15" name="s_double">
+        <data-type>double</data-type>
+      </column>
+      <key id="135" parent="15" name="PRIMARY">
+        <columns>s_name</columns>
+        <primary>1</primary>
+      </key>
+      <column id="136" parent="16" name="stats_player">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="137" parent="16" name="stats_kill">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="138" parent="16" name="stats_death">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="139" parent="16" name="stats_bonus">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="140" parent="16" name="stats_ball_shot">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="141" parent="16" name="stats_ball_touch">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="142" parent="16" name="stats_time">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="143" parent="16" name="stats_victory">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="144" parent="16" name="stats_defeat">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="145" parent="16" name="PRIMARY">
+        <columns>stats_player</columns>
+        <primary>1</primary>
+      </key>
+      <column id="146" parent="17" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <key id="147" parent="17" name="PRIMARY">
+        <columns>name</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+  <data-source name="MySQL - bd_rush_volcano@dev.vorps.net" uuid="2e3d05ce-e9b2-4855-a86e-802e8f3b453a">
+    <database-info product="MySQL" version="5.5.50-0+deb8u1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="bd_rush_volcano"/>
+      <table id="2" parent="1" name="book"/>
+      <table id="3" parent="1" name="book_setting"/>
+      <table id="4" parent="1" name="cooldown_gold"/>
+      <table id="5" parent="1" name="earning"/>
+      <table id="6" parent="1" name="item"/>
+      <table id="7" parent="1" name="kit"/>
+      <table id="8" parent="1" name="kit_setting"/>
+      <table id="9" parent="1" name="lang"/>
+      <table id="10" parent="1" name="limite"/>
+      <table id="11" parent="1" name="location"/>
+      <table id="12" parent="1" name="map"/>
+      <table id="13" parent="1" name="menu"/>
+      <table id="14" parent="1" name="menu_setting"/>
+      <table id="15" parent="1" name="message_title"/>
+      <table id="16" parent="1" name="parameter"/>
+      <table id="17" parent="1" name="product_menu"/>
+      <table id="18" parent="1" name="server"/>
+      <table id="19" parent="1" name="setting">
+        <comment>Paramètre du plugin RushVolcano</comment>
+      </table>
+      <table id="20" parent="1" name="shop"/>
+      <table id="21" parent="1" name="shop_setting"/>
+      <table id="22" parent="1" name="stats">
+        <comment>Stats du jeu RushVolcano</comment>
+      </table>
+      <table id="23" parent="1" name="team"/>
+      <table id="24" parent="1" name="team_setting"/>
+      <column id="25" parent="2" name="book_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="26" parent="2" name="book_author">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="27" parent="2" name="book_label">
+        <mandatory>1</mandatory>
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="28" parent="2" name="book_level">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="29" parent="2" name="PRIMARY">
+        <columns>book_name</columns>
+        <primary>1</primary>
+      </key>
+      <column id="30" parent="3" name="bs_book">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="31" parent="3" name="bs_page">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned</data-type>
+      </column>
+      <column id="32" parent="3" name="bs_value">
+        <mandatory>1</mandatory>
+        <data-type>varchar(60)</data-type>
+      </column>
+      <key id="33" parent="3" name="PRIMARY">
+        <columns>bs_book
+bs_page</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="34" parent="3" name="book_setting_ibfk_1">
+        <columns>bs_book</columns>
+        <ref-key>~.book.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="35" parent="4" name="c_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="36" parent="4" name="c_map">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="37" parent="4" name="c_block">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned</data-type>
+      </column>
+      <column id="38" parent="4" name="c_speed">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20) unsigned</data-type>
+      </column>
+      <column id="39" parent="4" name="c_gold">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned</data-type>
+      </column>
+      <column id="40" parent="4" name="c_position">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned</data-type>
+      </column>
+      <index id="41" parent="4" name="c_map">
+        <columns>c_map</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="42" parent="4" name="PRIMARY">
+        <columns>c_name
+c_map</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="43" parent="4" name="cooldown_gold_ibfk_1">
+        <columns>c_map</columns>
+        <ref-key>~.map.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="44" parent="5" name="e_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="45" parent="5" name="e_kill">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="46" parent="5" name="e_kill_device">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="47" parent="5" name="e_point">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="48" parent="5" name="e_point_device">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="49" parent="5" name="e_gold">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="50" parent="5" name="e_gold_device">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="51" parent="5" name="e_victory">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="52" parent="5" name="e_victory_device">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <index id="53" parent="5" name="e_gold_device">
+        <columns>e_gold_device</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="54" parent="5" name="e_kill_device">
+        <columns>e_kill_device</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="55" parent="5" name="e_point_device">
+        <columns>e_point_device</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="56" parent="5" name="e_victory_device">
+        <columns>e_victory_device</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="57" parent="5" name="PRIMARY">
+        <columns>e_name</columns>
+        <primary>1</primary>
+      </key>
+      <column id="58" parent="6" name="i_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="59" parent="6" name="i_label">
+        <mandatory>1</mandatory>
+        <data-type>varchar(60)</data-type>
+      </column>
+      <column id="60" parent="6" name="i_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="61" parent="6" name="i_byte">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="62" parent="6" name="i_skull_owner">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="63" parent="6" name="i_potion_type">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="64" parent="6" name="i_amount">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="65" parent="6" name="i_lore">
+        <data-type>varchar(60)</data-type>
+      </column>
+      <column id="66" parent="6" name="i_enchant">
+        <data-type>text</data-type>
+      </column>
+      <column id="67" parent="6" name="i_durability">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="68" parent="6" name="i_color">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="69" parent="6" name="i_hide_enchant">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <key id="70" parent="6" name="PRIMARY">
+        <columns>i_name</columns>
+        <primary>1</primary>
+      </key>
+      <column id="71" parent="7" name="k_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="72" parent="7" name="k_icon">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="73" parent="7" name="k_level">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="74" parent="7" name="PRIMARY">
+        <columns>k_name</columns>
+        <primary>1</primary>
+      </key>
+      <column id="75" parent="8" name="ks_kit">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="76" parent="8" name="ks_product_kit">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <index id="77" parent="8" name="ks_product_kit">
+        <columns>ks_product_kit</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="78" parent="8" name="PRIMARY">
+        <columns>ks_kit
+ks_product_kit</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="79" parent="8" name="kit_setting_ibfk_2">
+        <columns>ks_product_kit</columns>
+        <ref-key>~.product_menu.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="80" parent="8" name="kit_setting_ibfk_3">
+        <columns>ks_kit</columns>
+        <ref-key>~.kit.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="81" parent="9" name="l_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="82" parent="9" name="l_fr">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <key id="83" parent="9" name="PRIMARY">
+        <columns>l_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="84" parent="10" name="lim_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="85" parent="10" name="lim_x+">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="86" parent="10" name="lim_x-">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="87" parent="10" name="lim_y+">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="88" parent="10" name="lim_y-">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="89" parent="10" name="lim_z+">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="90" parent="10" name="lim_z-">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <key id="91" parent="10" name="PRIMARY">
+        <columns>lim_name</columns>
+        <primary>1</primary>
+      </key>
+      <column id="92" parent="11" name="loc_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="93" parent="11" name="loc_x">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="94" parent="11" name="loc_y">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="95" parent="11" name="loc_z">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="96" parent="11" name="loc_yaw">
+        <mandatory>1</mandatory>
+        <data-type>float</data-type>
+      </column>
+      <column id="97" parent="11" name="loc_pitch">
+        <mandatory>1</mandatory>
+        <data-type>float</data-type>
+      </column>
+      <key id="98" parent="11" name="PRIMARY">
+        <columns>loc_name</columns>
+        <primary>1</primary>
+      </key>
+      <column id="99" parent="12" name="m_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="100" parent="12" name="m_number_noyau">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="101" parent="12" name="m_spawn_lobby">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="102" parent="12" name="m_spawn_finish">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="103" parent="12" name="m_spawn_stats">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="104" parent="12" name="m_lobby_limite">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="105" parent="12" name="m_whitelist_block">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <key id="106" parent="12" name="PRIMARY">
+        <columns>m_name</columns>
+        <primary>1</primary>
+      </key>
+      <column id="107" parent="13" name="mn_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="108" parent="13" name="mn_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="109" parent="13" name="mn_size">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned</data-type>
+      </column>
+      <column id="110" parent="13" name="mn_label">
+        <mandatory>1</mandatory>
+        <data-type>varchar(60)</data-type>
+      </column>
+      <index id="111" parent="13" name="mn_label">
+        <columns>mn_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="112" parent="13" name="PRIMARY">
+        <columns>mn_name</columns>
+        <primary>1</primary>
+      </key>
+      <column id="113" parent="14" name="ms_menu">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="114" parent="14" name="ms_product">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <index id="115" parent="14" name="ms_product">
+        <columns>ms_product</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="116" parent="14" name="PRIMARY">
+        <columns>ms_menu
+ms_product</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="117" parent="14" name="menu_setting_ibfk_1">
+        <columns>ms_product</columns>
+        <ref-key>~.product_menu.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="118" parent="14" name="menu_setting_ibfk_2">
+        <columns>ms_menu</columns>
+        <ref-key>~.menu.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="119" parent="15" name="mt_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="120" parent="15" name="mt_title">
+        <mandatory>1</mandatory>
+        <data-type>varchar(60)</data-type>
+      </column>
+      <column id="121" parent="15" name="mt_sub_title">
+        <mandatory>1</mandatory>
+        <data-type>varchar(60)</data-type>
+      </column>
+      <key id="122" parent="15" name="PRIMARY">
+        <columns>mt_name</columns>
+        <primary>1</primary>
+      </key>
+      <column id="123" parent="16" name="p_parameter">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="124" parent="16" name="p_map">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="125" parent="16" name="p_label">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="126" parent="16" name="p_gold_noyau">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="127" parent="16" name="p_gold_kill">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="128" parent="16" name="p_time_game">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned</data-type>
+      </column>
+      <column id="129" parent="16" name="p_earning">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <index id="130" parent="16" name="p_map">
+        <columns>p_map</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="131" parent="16" name="PRIMARY">
+        <columns>p_parameter
+p_map</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="132" parent="16" name="parameter_ibfk_1">
+        <columns>p_map</columns>
+        <ref-key>~.map.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="133" parent="17" name="pd_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="134" parent="17" name="pd_index">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="135" parent="17" name="pd_price">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="136" parent="17" name="PRIMARY">
+        <columns>pd_name</columns>
+        <primary>1</primary>
+      </key>
+      <column id="137" parent="18" name="sv_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="138" parent="18" name="sv_parameter">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="139" parent="18" name="sv_nb_player">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned</data-type>
+      </column>
+      <column id="140" parent="18" name="sv_min_player">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="141" parent="18" name="sv_max_player">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="142" parent="18" name="sv_scenario">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <index id="143" parent="18" name="sv_parameter">
+        <columns>sv_parameter</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="144" parent="18" name="PRIMARY">
+        <columns>sv_name
+sv_parameter</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="145" parent="18" name="server_ibfk_1">
+        <columns>sv_parameter</columns>
+        <ref-key>bd_rush_volcano.parameter(p_parameter)</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="146" parent="19" name="s_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="147" parent="19" name="s_boolean">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="148" parent="19" name="s_int">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="149" parent="19" name="s_text">
+        <data-type>text</data-type>
+      </column>
+      <column id="150" parent="19" name="s_double">
+        <data-type>double</data-type>
+      </column>
+      <key id="151" parent="19" name="PRIMARY">
+        <columns>s_name</columns>
+        <primary>1</primary>
+      </key>
+      <column id="152" parent="20" name="sp_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="153" parent="20" name="sp_map">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="154" parent="20" name="sp_team">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+        <default-expression>&apos;red&apos;</default-expression>
+      </column>
+      <column id="155" parent="20" name="sp_type">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="156" parent="20" name="sp_spawn">
+        <mandatory>1</mandatory>
+        <data-type>varchar(40)</data-type>
+      </column>
+      <index id="157" parent="20" name="sp_map">
+        <columns>sp_map</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="158" parent="20" name="sp_team">
+        <columns>sp_team</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="159" parent="20" name="PRIMARY">
+        <columns>sp_name
+sp_map
+sp_team
+sp_type</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="160" parent="20" name="shop_ibfk_2">
+        <columns>sp_team</columns>
+        <ref-key>~.team.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="161" parent="20" name="shop_ibfk_3">
+        <columns>sp_map</columns>
+        <ref-key>~.map.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="162" parent="21" name="sps_shop">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="163" parent="21" name="sps_menu">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="164" parent="21" name="sps_label">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <index id="165" parent="21" name="sps_label">
+        <columns>sps_label</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="166" parent="21" name="sps_menu">
+        <columns>sps_menu</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="167" parent="21" name="PRIMARY">
+        <columns>sps_shop
+sps_menu</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="168" parent="21" name="shop_setting_ibfk_1">
+        <columns>sps_menu</columns>
+        <ref-key>~.menu.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="169" parent="22" name="s_player">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="170" parent="22" name="s_kill">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned</data-type>
+      </column>
+      <column id="171" parent="22" name="s_dead">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned</data-type>
+      </column>
+      <column id="172" parent="22" name="s_break">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned</data-type>
+      </column>
+      <column id="173" parent="22" name="s_gold">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned</data-type>
+      </column>
+      <column id="174" parent="22" name="s_time">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned</data-type>
+      </column>
+      <column id="175" parent="22" name="s_victory">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned</data-type>
+      </column>
+      <column id="176" parent="22" name="s_defeat">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned</data-type>
+      </column>
+      <key id="177" parent="22" name="PRIMARY">
+        <columns>s_player</columns>
+        <primary>1</primary>
+      </key>
+      <column id="178" parent="23" name="t_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="179" parent="23" name="t_color">
+        <mandatory>1</mandatory>
+        <data-type>varchar(4)</data-type>
+      </column>
+      <column id="180" parent="23" name="t_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned</data-type>
+      </column>
+      <column id="181" parent="23" name="t_id_byte">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned</data-type>
+      </column>
+      <column id="182" parent="23" name="t_color_rgb">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned</data-type>
+      </column>
+      <column id="183" parent="23" name="t_label">
+        <mandatory>1</mandatory>
+        <data-type>varchar(60)</data-type>
+      </column>
+      <key id="184" parent="23" name="PRIMARY">
+        <columns>t_name</columns>
+        <primary>1</primary>
+      </key>
+      <column id="185" parent="24" name="ts_team">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="186" parent="24" name="ts_map">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="187" parent="24" name="ts_spawn_game">
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="188" parent="24" name="ts_spawn_lobby">
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="189" parent="24" name="ts_limite_lobby">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="190" parent="24" name="ts_zone_spawn">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <column id="191" parent="24" name="ts_noyau_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned</data-type>
+      </column>
+      <column id="192" parent="24" name="ts_noyau_byte">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="193" parent="24" name="ts_map">
+        <columns>ts_map</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="194" parent="24" name="PRIMARY">
+        <columns>ts_team
+ts_map</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="195" parent="24" name="team_setting_ibfk_2">
+        <columns>ts_team</columns>
+        <ref-key>~.team.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="196" parent="24" name="team_setting_ibfk_3">
+        <columns>ts_map</columns>
+        <ref-key>~.map.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+    </database-model>
+  </data-source>
+  <data-source name="MySQL - bd_eclipse@dev.vorps.net" uuid="61c7a434-d1d0-4e98-a40e-bf13ef526772">
+    <database-info product="MySQL" version="5.5.50-0+deb8u1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="bd_eclipse"/>
+      <table id="2" parent="1" name="lang_setting">
+        <comment>Lang suport</comment>
+      </table>
+      <table id="3" parent="1" name="money">
+        <comment>Liste des money existante sur le serveur sirelMC</comment>
+      </table>
+      <table id="4" parent="1" name="player"/>
+      <table id="5" parent="1" name="player_money"/>
+      <table id="6" parent="1" name="rankPermissions"/>
+      <column id="7" parent="2" name="ls_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="8" parent="2" name="ls_column_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="9" parent="2" name="ls_name_display">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <key id="10" parent="2" name="PRIMARY">
+        <columns>ls_name</columns>
+        <primary>1</primary>
+      </key>
+      <column id="11" parent="3" name="m_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="12" parent="3" name="m_alias">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="13" parent="3" name="m_color">
+        <mandatory>1</mandatory>
+        <data-type>varchar(4)</data-type>
+      </column>
+      <key id="14" parent="3" name="PRIMARY">
+        <columns>m_name</columns>
+        <primary>1</primary>
+      </key>
+      <column id="15" parent="4" name="uuid">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="16" parent="4" name="last_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="17" parent="4" name="language">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="18" parent="4" name="player_rank">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="19" parent="4" name="first_connection">
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <column id="20" parent="4" name="last_connection">
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <column id="21" parent="4" name="last_hub">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <key id="22" parent="4" name="PRIMARY">
+        <columns>uuid</columns>
+        <primary>1</primary>
+      </key>
+      <column id="23" parent="5" name="pm_uuid">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="24" parent="5" name="pm_money">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="25" parent="5" name="pm_value">
+        <mandatory>1</mandatory>
+        <data-type>double</data-type>
+      </column>
+      <index id="26" parent="5" name="pm_money">
+        <columns>pm_money</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="27" parent="5" name="PRIMARY">
+        <columns>pm_uuid</columns>
+        <primary>1</primary>
+      </key>
+      <column id="28" parent="6" name="rank">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="29" parent="6" name="permissions">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <index id="30" parent="6" name="rank">
+        <columns>rank</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="31" parent="6" name="rank_2">
+        <columns>rank</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="32" parent="6" name="rank">
+        <columns>rank</columns>
+        <underlying-index>rank</underlying-index>
+      </key>
+      <key id="33" parent="6" name="rank_2">
+        <columns>rank</columns>
+        <underlying-index>rank_2</underlying-index>
+      </key>
+    </database-model>
+  </data-source>
+</component>
